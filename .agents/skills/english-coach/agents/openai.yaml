@@ -1,0 +1,4 @@
+interface:
+  display_name: "English Coach"
+  short_description: "Practice natural English with adaptive coaching"
+  default_prompt: "Use $english-coach to start a quick English conversation practice."
