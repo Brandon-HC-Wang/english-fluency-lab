@@ -4,3 +4,4 @@ Use this history to balance practice categories and avoid accidental repetition.
 
 | Date | Mode | Category | Topic | Session |
 | --- | --- | --- | --- | --- |
+| 2026-10-12 | quick | daily-life | weekend-plans | [Session](../sessions/2026/2026-10-12-1538-quick-weekend-plans.md) |

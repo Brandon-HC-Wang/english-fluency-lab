@@ -1,6 +1,50 @@
 # Review queue
 
-No review item is scheduled yet.
+## Active items
+
+```yaml
+- id: feel-burned-out
+  focus: collocation
+  prompt_context: Describe feeling exhausted after a demanding day in a new situation.
+  target: Use feel burned out or a valid equivalent to describe the state.
+  source_sessions:
+    - sessions/2026/2026-10-12-1538-quick-weekend-plans.md
+  next_review: 2026-10-13
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
+
+- id: leave-the-office
+  focus: grammar
+  prompt_context: Describe leaving the workplace in a fresh situation.
+  target: Use leave the office or left the office without an unnecessary from.
+  source_sessions:
+    - sessions/2026/2026-10-12-1538-quick-weekend-plans.md
+  next_review: 2026-10-13
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
+
+- id: spend-time-with
+  focus: collocation
+  prompt_context: Describe relaxing with a friend or family member in a new situation.
+  target: Use spend time with someone or a valid equivalent for companionship.
+  source_sessions:
+    - sessions/2026/2026-10-12-1538-quick-weekend-plans.md
+  next_review: 2026-10-13
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
+```
 
 ## Use during practice
 
