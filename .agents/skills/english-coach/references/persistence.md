@@ -26,7 +26,7 @@ Use `status: completed` only after a normal stop or an automatic mode limit. Do 
 Create the required `knowledge/` files when they do not yet exist. Update only items supported by the completed activity:
 
 - `knowledge/error-patterns.md`: recurring or potentially important issues, with category, evidence count, first seen, last seen, examples, and status
-- `knowledge/review-queue.md`: specific grammar, vocabulary, collocation, or pragmatic items worth retrieving again, including a next-review date when practical
+- `knowledge/review-queue.md`: specific grammar, vocabulary, collocation, or pragmatic items worth retrieving again; follow [review-policy.md](review-policy.md) for creation, dated evidence, outcomes, scheduling, and mastery. Save the source session before applying each item's update once.
 - `knowledge/scenario-history.md`: date, mode, category, and topic, used to prevent accidental repetition
 
 Do not update `knowledge/current-level.md` after every ordinary chat. Update it only after baseline or analysis mode, or when a meaningful evidence-backed change is clear.

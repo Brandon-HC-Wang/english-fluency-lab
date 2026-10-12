@@ -39,6 +39,7 @@
 ## Review mode
 
 - Select due or weak items from `knowledge/review-queue.md`.
+- Follow [review-policy.md](review-policy.md) for item selection, the default completion limit, outcome tracking, and scheduling.
 - When the queue has no usable items, say so briefly and run a short diagnostic retrieval exercise instead of inventing history.
 - Test retrieval in fresh contexts rather than showing the stored answer first.
 - Mark an item improved only after the learner produces it independently and correctly.

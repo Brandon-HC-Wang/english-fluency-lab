@@ -59,3 +59,35 @@ Expected behavior:
 - Prioritize due items and test them in fresh contexts without revealing targets first.
 - Update correctness only from independent learner production.
 - Retain unresolved items and avoid marking mastery after one lucky answer.
+
+## Review scheduling and mastery
+
+Use synthetic items and session outcomes in a temporary directory or a dry run. Do not add these fixtures to the learner's actual records. Apply [review-policy.md](../.agents/skills/english-coach/references/review-policy.md).
+
+| Case | Given and action | Expected result |
+| --- | --- | --- |
+| New item | A useful correction is observed in a completed October 12 session | Streak 0, null review evidence fields, `scheduled`, next review October 13; no recurring weakness invented |
+| Graduated intervals | Independent successes on October 13, 16, and 23 | Streaks 1, 2, 3; next dates October 16, 23, November 6; mastery only at the third success |
+| Maintenance | That mastered item is answered independently on November 6 | Retain `mastered`; next review December 6 |
+| Failure | An improving or mastered item is answered incorrectly on October 23 | Streak 0, null streak start, `scheduled`, next review October 24; retain source evidence |
+| Assisted answer | The learner produces the target only after a hint or model answer | Same scheduling reset as failure; a corrected retry does not count as success |
+| Valid alternative | The learner uses a different expression that independently satisfies the target | Count it as correct; unrelated errors do not invalidate the target |
+| Same-day repetition | Independent successes in multiple October 13 sessions | Only one streak increment; the first successful schedule remains unchanged |
+| Same-day later failure | A different session on October 13 has an incorrect first attempt after an earlier success | Reset the streak; next review October 14; no second same-day success counted |
+| Same-day success after failure | After that success and failure, a third October 13 session produces a correct answer | Record correct practice but retain streak 0 and the October 14 date; the day's success cannot count twice |
+| Early successes | Independent successes on October 13, 14, and 15 | Streak 3 but still `improving`; next review October 29 because the span is only two days |
+| Long break | An item due October 13 is first successfully reviewed November 1 | First success schedules November 4; no catch-up exercises or automatic failure |
+| Mastered item due | A mastered item has a maintenance date on or before today | Eligible for selection while its stored progress status remains `mastered` |
+| No assessed answer | The item is skipped, unanswered when practice ends, or cannot be judged | No streak, date, status, or review evidence changes |
+| Duplicate completion | Completion handling encounters the same `last_review_session` again | No second streak update or rescheduling |
+| Missing historical fields | An old item has a claimed streak but no supporting session evidence | Reset unsupported streak and mastery, retain source links and due date; fabricate nothing |
+
+## Review selection and conversation integration
+
+Expected behavior:
+
+- Review or quiz mode selects up to three due items ordered by oldest date, lower streak, and ID; honors the learner's requested length.
+- Review mode finishes after the selected items' initial attempts, feedback, and any optional retries, then persists once. Quiz mode retains its own question limit.
+- General conversation incorporates at most one due item that fits naturally, preserving the requested scenario and stopping condition.
+- An empty due set with unresolved items permits one early check. If none are unresolved, use a short diagnostic fallback without inventing weaknesses.
+- Untested backlog items remain unchanged; no requirement to practice on a due date or clear the backlog.

@@ -13,6 +13,7 @@ description: Coach and track English learning through adaptive conversation, rol
    - Read `learner/profile.md` and `learner/goals.md` when present.
    - For conversation selection or review, read `knowledge/error-patterns.md`, `knowledge/review-queue.md`, and `knowledge/scenario-history.md` when present.
    - For analysis, also inspect the relevant session records and previous assessments. Prefer recent evidence plus a representative older sample; do not assume every historical file must be loaded.
+   - Before selecting review items for any mode or updating their outcomes, read [review-policy.md](references/review-policy.md) for scheduling, assistance, and mastery rules.
 4. Start immediately when the request supplies enough context. Do not ask the learner to repeat preferences already stored in the repository.
 5. Keep the scenario coherent until its stopping condition is reached.
 

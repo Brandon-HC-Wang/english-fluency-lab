@@ -2,6 +2,17 @@
 
 No review item is scheduled yet.
 
+## Use during practice
+
+- Retain due items until the learner next chooses to practice; do not require a fixed practice schedule or clearing the entire backlog.
+- Prioritize due items in review or quiz mode. During general conversation, incorporate a small number only when they fit the learner's scenario and requested length naturally.
+- Do not let review items replace the requested activity or reveal their targets before testing retrieval.
+- Require independent correct production across separate sessions before marking an item mastered.
+
+## Scheduling rules
+
+Follow [review-policy.md](../.agents/skills/english-coach/references/review-policy.md) for intervals, selection limits, assisted answers, and mastery. It is the canonical policy; dates are based on the learner's local calendar and the actual practice date.
+
 ## Entry schema
 
 ```yaml
@@ -13,6 +24,10 @@ No review item is scheduled yet.
     - relative/path/to/session.md
   next_review: YYYY-MM-DD
   correct_streak: 0
+  streak_started_on: null  # YYYY-MM-DD after the first counted success
+  last_success_on: null  # YYYY-MM-DD; retained on failure to prevent same-day recounting
+  last_reviewed: null  # YYYY-MM-DD after an assessed review
+  last_review_session: null  # relative session path, for evidence and duplicate protection
   status: due | scheduled | improving | mastered
 ```
 
