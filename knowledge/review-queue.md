@@ -44,6 +44,48 @@
   last_reviewed: null
   last_review_session: null
   status: scheduled
+
+- id: set-a-deadline
+  focus: collocation
+  prompt_context: Explain who set a deadline and why it is difficult to meet in a fresh workplace situation.
+  target: Use set a deadline and describe whether it is realistic, or a valid equivalent.
+  source_sessions:
+    - sessions/2026/2026-10-13-1727-random-ai-development-deadlines.md
+  next_review: 2026-10-14
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
+
+- id: spend-time-doing
+  focus: grammar
+  prompt_context: Explain needing additional time for an activity in a new situation.
+  target: Use spend more time doing something or need more time to do something, or a valid equivalent.
+  source_sessions:
+    - sessions/2026/2026-10-13-1727-random-ai-development-deadlines.md
+  next_review: 2026-10-14
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
+
+- id: human-review-needed
+  focus: grammar
+  prompt_context: Explain which tasks still require people after an automated tool produces an output.
+  target: Use tasks still need to be done by humans or an accurate active equivalent such as people still need to review and test the output.
+  source_sessions:
+    - sessions/2026/2026-10-13-1727-random-ai-development-deadlines.md
+  next_review: 2026-10-14
+  correct_streak: 0
+  streak_started_on: null
+  last_success_on: null
+  last_reviewed: null
+  last_review_session: null
+  status: scheduled
 ```
 
 ## Use during practice
